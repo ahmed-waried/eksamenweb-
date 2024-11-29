@@ -1,42 +1,24 @@
-/* Global reset*/
-/* Logo-stil */
-header .logo {
-    
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-right: 20px;
-    display: inline-block;
-    background-color: #1F51FF; /* Blå bakgrunn */
-    padding: 10px 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Skygge */
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-header .logo img {
-    height: 150px; /* Adjust the height to fit your design */
-    max-width: 100%; /* Ensure the image doesn't overflow */
-    object-fit: contain; /* Keep the aspect ratio of the image */
-    display: block;
-    border-radius: 8px; /* Optional: Adds rounded corners to the logo */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds shadow for depth */
-    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header .logo:hover {
-    background-color: #39FF14; /* Neon grønn ved hover */
-    color: black; /* Endre tekstfarge ved hover */
-    transform: scale(1.1); /* Zoom-effekt */
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000; /* Black background */
+    color: #FFF; /* White text */
+    line-height: 1.6;
 }
 
-/* Header */
+/* Header styling */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1F51FF; /* Mørk blå */
+    background-color: #1F51FF; /* Dark blue */
     padding: 15px 20px;
     position: sticky;
     top: 0;
@@ -44,6 +26,7 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Navigation menu */
 header nav ul {
     display: flex;
     list-style: none;
@@ -60,92 +43,24 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #39FF14; /* Neon grønn */
+    color: #39FF14; /* Neon green */
 }
 
-/* Søke- og handlekurv-delen */
-.search-cart {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #000; /* Svart bakgrunn */
-    color: #FFF; /* Hvit tekst */
-    line-height: 1.6;
-    padding-top: 50px;
-}
-
-/* Links */
-a {
-    text-decoration: none;
-    color: #39FF14; /* Neon-grønn */
-    transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-    color: #1F51FF; /* Mørk blå ved hover */
-}
-
-/* Buttons */
-button {
-    background-color: #1F51FF; /* Mørk blå */
-    color: #FFF;
-    border: 2px solid #39FF14; /* Neon-grønn ramme */
-    padding: 10px 20px;
+/* Logo styling */
+header .logo img {
+    height: 50px; /* Adjusted height for the logo */
+    object-fit: contain;
+    display: block;
     border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
 }
 
-button:hover {
-    background-color: #39FF14; /* Neon-grønn ved hover */
-    transform: scale(1.1); /* Zoom-effekt */
+header .logo img:hover {
+    transform: scale(1.1); /* Hover zoom effect */
 }
 
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1F51FF; /* Mørk blå */
-    padding: 15px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Skygge */
-}
-
-header nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-header nav ul li a {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #39FF14; /* Neon grønn */
-}
-
+/* Search and cart section */
 .search-cart {
     display: flex;
     align-items: center;
@@ -179,11 +94,10 @@ header nav ul li a:hover {
 
 /* Banner Section */
 #banner {
-    background: linear-gradient(45deg, #1F51FF, #39FF14); /* Dynamisk gradient */
+    background: linear-gradient(45deg, #1F51FF, #39FF14); /* Dynamic gradient */
     text-align: center;
     padding: 60px 20px;
     color: #FFF;
-    border-bottom: 5px solid #FFF; /* Hvit linje for skille */
 }
 
 #banner h1 {
@@ -214,65 +128,12 @@ header nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Products Section */
-#popular-products {
-    padding: 60px 20px;
-    background-color: #111; /* Mørk grå for kontrast */
-    color: #FFF;
-}
-
-#popular-products h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Product Cards */
-.product-card {
-    display: inline-block;
-    width: 30%;
-    margin: 15px 1%;
-    background-color: #1F51FF;
-    color: #FFF;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
-}
-
-.product-card img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.product-card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.product-card p {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-/* Footer */
+/* Footer styling */
 footer {
     background-color: #1F51FF;
     color: #FFF;
     text-align: center;
     padding: 20px;
-}
-
-footer h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
 }
 
 footer ul {
@@ -290,5 +151,81 @@ footer ul a {
 }
 
 footer ul a:hover {
-    color: #39FF14;
+    color: #39FF14; /* Neon green */
+}
+/* Reviews Section */
+#customer-reviews {
+    text-align: center;
+    padding: 20px;
+    background-color: #111; /* Dark gray background */
+    color: #FFF;
+    margin: 20px auto;
+    max-width: 80%; /* Center the box with a max width */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#customer-reviews h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.review {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #222; /* Slightly lighter gray for reviews */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Product Section */
+#popular-products {
+    padding: 40px 20px;
+    background-color: #111;
+    color: #FFF;
+}
+
+#popular-products h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Product Grid */
+.product-card {
+    display: inline-block;
+    width: 23%; /* Adjust to fit 4 products in a row */
+    margin: 1%;
+    background-color: #1F51FF; /* Dark blue */
+    color: #FFF;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center; /* Center content within the card */
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 18px;
+    margin-bottom: 15px;
 }

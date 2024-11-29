@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Se vårt brede utvalg av produkter, fra elektronikk til klær. Bestill i dag!">
+    <meta name="description" content="Se vårt nr1 utvalg!">
     <title>Produkt - Nettbutikk</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    
     <header>
         <nav>
             <ul>
@@ -19,64 +18,77 @@
                 <li><a href="#contact">Kontakt oss</a></li>
             </ul>
         </nav>
-        <a href="index.html" class="logo" aria-label="Gå til forsiden"><img src="logo.png" alt=""></a>
+        <a href="index.html" class="logo" aria-label="Gå til forsiden"><img src="logo.png" alt="Logo"></a>
         <form action="#" class="search-cart" role="search">
             <input type="text" placeholder="Søk..." aria-label="Søk etter produkter">
             <a href="checkout.html" aria-label="Gå til handlekurv" class="cart-icon">
-                 🛒
+                🛒
                 <span id="cart-count">0</span>
             </a>
         </form>
     </header>
 
-    <main> 
+    <main>
         <section id="product-details" class="product-section">
-
             <aside class="product-image">
                 <img src="https://picsum.photos/120/120" alt="Fotball Drakter" />
             </aside>
         </section>
-        
-        <section id="similar-products" class="product-section">
 
-            <div class="product-list">
+        <!-- Reviews Section -->
+        <section id="customer-reviews" class="reviews-section">
+            <h2>Meninger fra kjente kunder</h2>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <p>"Veldig bra kvalitet og raske leveringer! Anbefales på det sterkeste."</p>
+                    <p>- Ahmed M.</p>
+                </div>
+                <div class="review-box">
+                    <p>"Fikk akkurat det jeg trengte til treningen."</p>
+                    <p>- Cristiano R.</p>
+                </div>
+                <div class="review-box">
+                    <p>"Rimelige priser og flotte produkter. Anbefaler basketballskoene."</p>
+                    <p>- LeBron J.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Similar Products Section -->
+        <section id="similar-products" class="product-section">
+            <div class="product-grid">
                 <article class="product-card">
                     <img src="https://picsum.photos/150" alt="Produkt 1">
-                    <h3>trening shorter</h3>
+                    <h3>Treningsshorter</h3>
                     <p>Pris: 399 NOK</p>
-                    <a href="product.html" class="btn">Se produkt</a>
-                    <button onclick="addToCart( produkt )">Legg i handlekurv</button>
+                    <button onclick="addToCart('Treningsshorter')">Legg i handlekurv</button>
                 </article>
                 <article class="product-card">
                     <img src="https://picsum.photos/150" alt="Produkt 2">
-                    <h3>sko</h3>
-                    <p>Pris:sko 800-1600 NOK</p>
-                    <a href="product.html" class="btn">Se produkt</a>
-                    <button>Legg i handlekurv</button>
+                    <h3>Sko</h3>
+                    <p>Pris: 800-1600 NOK</p>
+                    <button onclick="addToCart('Sko')">Legg i handlekurv</button>
                 </article>
                 <article class="product-card">
                     <img src="https://picsum.photos/150" alt="Produkt 3">
-                    <h3>baller og accesory</h3>
-                    <p>pris: 399 NOK</p>
-                    <a href="product.html" class="btn">Se produkt</a>
-                    <button onclick="addToCart( produkt )">Legg i handlekurv</button>
+                    <h3>Baller og accessories</h3>
+                    <p>Pris: 399 NOK</p>
+                    <button onclick="addToCart('Baller og accessories')">Legg i handlekurv</button>
                 </article>
                 <article class="product-card">
                     <img src="https://picsum.photos/150" alt="Produkt 4">
-                    <h3>jogge bukser  </h3>
+                    <h3>Joggebukser</h3>
                     <p>Pris: 399 NOK</p>
-                    <a href="product.html" class="btn">Se produkt</a>
-                    <button onclick="addToCart( produkt )">Legg i handlekurv</button>
+                    <button onclick="addToCart('Joggebukser')">Legg i handlekurv</button>
                 </article>
             </div>
         </section>
     </main>
 
-        <footer id="contact">
+    <footer id="contact">
         <section>
             <h3>Kontakt oss</h3>
             <p>E-post: <a href="mailto:postmottak@hiof.no">postmottak@hiof.no</a></p>
-           
         </section>
         <section>
             <h3>Snarveier</h3>
@@ -87,7 +99,7 @@
             </ul>
         </section>
         <section>
-            <h3>våre sosiale medier</h3>
+            <h3>Våre sosiale medier</h3>
             <ul>
                 <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
                 <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
