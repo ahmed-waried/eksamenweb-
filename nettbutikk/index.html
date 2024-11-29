@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
+    
     <header>
         <nav>
             <ul>
@@ -24,51 +24,54 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
+    
     <main>
-        <!-- Banner Seksjon -->
+        
         <section id="banner">
             <h1>Velkommen til Nettbutikken</h1>
             <p>Oppdag fantastiske tilbud!</p>
-            <a href="#produkter">Se våre produkter</a>
+            <a href="#produkter" class="btn">Se våre produkter</a>
         </section>
 
-        <!-- Våre mest populære produkter -->
+        
         <section id="produkter">
             <h2>Våre mest populære produkter</h2>
             <p>Oppdag våre bestselgere.</p>
             <div class="grid-container">
-                <!-- Produktkortene -->
                 <article class="produkt">
                     <img src="product1.jpg" alt="Produkt 1">
                     <h3>Produktnavn</h3>
                     <p>kr 100,-</p>
+                    <p>☆ (10 anmeldelser)</p>
+                    <button class="btn">Legg i handlekurv</button>
                 </article>
                 <article class="produkt">
                     <img src="product2.jpg" alt="Produkt 2">
                     <h3>Produktnavn</h3>
                     <p>kr 200,-</p>
+                    <p>☆☆ (5 anmeldelser)</p>
+                    <button class="btn">Legg i handlekurv</button>
                 </article>
-                <!-- Gjenta for flere produkter -->
             </div>
         </section>
-
-        <!-- Våre mest populære kategorier -->
-        <section id="kategorier">
+        <!-- hentet stjernetegn for annmeldelser fra google -->
+        
+         <section id="kategorier">
             <h2>Våre mest populære kategorier</h2>
             <p>Utforsk kategoriene våre.</p>
             <div class="grid-container">
                 <article class="kategori">
-                    <h3>Kategorienavn</h3>
+                    <img src="" alt="Kategori 1">
+                    <h3>Elektronikk</h3>
                 </article>
                 <article class="kategori">
-                    <h3>Kategorienavn</h3>
+                    <img src="category2.jpg" alt="Kategori 2">
+                    <h3>Klær</h3>
                 </article>
-                <!-- Gjenta for flere kategorier -->
             </div>
         </section>
 
-        <!-- Anmeldelser -->
+       
         <section id="anmeldelser">
             <h2>Anmeldelser</h2>
             <article class="anmeldelse">
@@ -84,7 +87,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
+  
     <footer>
         <div>
             <img src="logo.png" alt="Logo">

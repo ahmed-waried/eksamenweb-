@@ -1,300 +1,279 @@
-/* Global reset for å fjerne standardmarginer og padding */
-* {
+:root { 
+    --primary-color: #1e3a8a; /* Mørk blå sportston */
+    --secondary-color: #2563eb; /* Lysere sport blå */
+    --accent-color: #10b981; /* Sport grønn aksent */
+    --text-color: #f4f4f4; /* Lys tekst */
+    --hover-color: #d97706; /* Oransje aksent for interaksjon */
+    --border-radius: 12px;
+    --shadow-light: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    --background-color: #111827; /* Mørk bakgrunn */
+    --text-color-dark: #e5e7eb; /* Lys tekst for kontrast */
+    --text-color-light: #9ca3af; /* Grå tekst for detaljer */
+}
+
+/* ===== Global Styles ===== */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    color: var(--text-color-dark);
     box-sizing: border-box;
+    background-color: var(--background-color);
 }
 
-/* Generelle stiler for hele nettsiden */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    padding-top: 50px; /* For å gi plass til headeren */
+h1, h2, h3 {
+    font-weight: bold;
+    margin: 10px 0;
+    color: var(--text-color);
 }
 
-/* Linker */
+p {
+    font-weight: 400;
+    margin: 10px 0;
+    color: var(--text-color-light);
+}
+
 a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Knappestil */
-button {
-    cursor: pointer;
-    background-color: #FF6F61; /* Lys korallfarge */
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    font-size: 16px;
+a:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
 }
 
-button:hover {
-    background-color: #3bd3d833; /* Mørkere korallfarge ved hover */
-    transform: scale(1.05); /* Skalerer knappen litt ved hover */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
 }
 
-/* Header-stil */
+/* ===== Header Styles ===== */
 header {
-    background-color: #3300ff; /* Lyseblå bakgrunnsfarge */
-    padding: 20px 0;
+    background-color: var(--primary-color);
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    margin: 0 auto;
-    position: static; /* Fjerner fast posisjon */
-    z-index: 1000;
+    box-shadow: var(--shadow-light);
 }
 
-/* Logo-stil */
-header .logo {
+.header-nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    font-weight: bold;
-    color: #fff; /* Hvit tekst for logoen */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding-left: 15px;
+    gap: 20px;
 }
 
-header .logo img {
-    height: 50px; /* logo større */
-    max-width: 100%;
-    margin-right: 10px;
-}
-
-/* Navigasjon */
-header nav ul {
+.menu {
     display: flex;
     gap: 20px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-header nav a {
-    color: #fff; /* Hvit på navigasjonslinkene */
-    font-size: 18px;
-    transition: color 0.3s;
+.menu a {
+    color: var(--text-color);
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-header nav a:hover {
-    color: #FF6F61; /* hud ved hover */
+.menu a:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.1);
 }
 
-/* Søkeboks og handlekurv */
-header .search-cart {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-header .search-cart input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
-}
-
-header .search-cart img {
-    width: 24px;
-    height: 24px;
-}
-
-/* justering som er resposiv for mobilskjermer */
-@media (max-width: 768px) {
-    header .search-cart input {
-        width: 150px;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .logo img {
-        height: 40px; /* Juster logoen for mobil */
-    }
-}
-
-/* Banner Seksjon */
-#banner {
-    background: linear-gradient(45deg, #FF6F61, #FFD700); /* Gradient bakgrunn */
-    color: white;
+.logo {
+    font-size: 1.8rem;
+    color: var(--accent-color);
     text-align: center;
-    padding: 50px 20px;
-    margin-top: 80px;
+    font-weight: bold;
 }
 
-#banner h1 {
-    font-size: 36px;
+.cart-icon {
+    position: relative;
+    width: 36px;
+    height: 36px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: var(--hover-color);
+    color: var(--text-color);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 7px;
+    border-radius: 50%;
+    box-shadow: var(--shadow-light);
+}
+
+/* ===== Søkebar Styles ===== */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px auto;
+    background-color: var(--secondary-color);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    font-size: 1rem;
+    color: var(--text-color-dark);
+    background-color: var(--background-color);
+}
+
+.search-btn {
+    background-color: var(--accent-color);
+    color: var(--text-color-dark);
+    border: none;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+/* ===== Banner Section ===== */
+.banner {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: var(--shadow-light);
+    border-radius: var(--border-radius);
+}
+
+.banner h1 {
+    font-size: 3rem;
+    color: var(--accent-color);
     margin-bottom: 10px;
 }
 
-#banner p {
-    font-size: 20px;
-    margin-bottom: 20px;
+.banner p {
+    font-size: 1.2rem;
 }
 
-#banner .btn {
-    background-color: #fff;
-    color: #FF6F61; /* Korallfarge */
-    padding: 12px 30px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#banner .btn:hover {
-    background-color: #FF6F61; /* Bakgrunn blir korallfarget */
-    color: #fff; /* Tekst blir hvit */
-}
-
-/* Produkter Seksjon */
-#popular-products {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
-#popular-products h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Produktkort */
-.product-card {
+.banner .btn {
+    margin-top: 20px;
     display: inline-block;
-    width: 30%;
-    margin: 15px 1%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 25px;
+    background-color: var(--accent-color);
+    color: var(--text-color-dark);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.banner .btn:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.1);
+}
+
+/* ===== Produkter Section ===== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px 20px;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+.product-card {
+    background-color: var(--primary-color);
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    color: var(--text-color);
 }
 
 .product-card:hover {
-    transform: translateY(-10px); /* Hever kortet ved hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
 }
 
 .product-card img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     margin-bottom: 15px;
-    transition: transform 0.3s;
-}
-
-.product-card img:hover {
-    transform: scale(1.05); /* Zoom på bilde ved hover */
+    border: 4px solid var(--accent-color);
 }
 
 .product-card h3 {
-    font-size: 20px;
+    font-size: 1.4rem;
     margin-bottom: 10px;
-    color: #333;
+    color: var(--accent-color);
 }
 
 .product-card p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 15px;
+    font-size: 1rem;
+    color: var(--text-color-light);
+    margin-bottom: 10px;
 }
 
-/* Produktbilde - standard størrelse (25% bredde) */
-.product-image img {
-    width: 25%; /* Sett bildet til å ta 25% av bredden */
-    height: auto;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-/* Responsiv design for små skjermer */
-@media (max-width: 768px) {
-    .product-image img {
-        width: 100%; /* På mobil, sett bildet til 100% av bredden */
-    }
-
-    .product-card {
-        width: 45%; /* Øk bredden på produktkortene på mobil */
-    }
-
-    header .search-cart input {
-        width: 150px; /* Reduserer bredden på søkeboksen på mobil */
-    }
-}
-
-/* Kategorier Seksjon */
-#popular-categories {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-#popular-categories h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Kategorikort */
-.category-card {
-    display: inline-block;
-    width: 30%;
-    margin: 15px 1%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.category-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.category-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.category-card h3 {
-    font-size: 20px;
+.product-card .btn {
     margin-top: 10px;
-    color: #333;
+    background-color: var(--accent-color);
+    color: var(--text-color-dark);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
 }
 
-/* Kontakt Seksjon */
-#contact {
-    padding: 40px 20px;
-    background-color: #fff;
-    text-align: center;
+.product-card .btn:hover {
+    background-color: var(--hover-color);
+    color: var(--text-color);
 }
 
-#contact h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #333;
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-#contact p {
-    font-size: 18px;
-    color: #666;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-
-
