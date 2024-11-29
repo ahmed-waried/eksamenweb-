@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Globalt Header -->
+    
     <header>
         <div class="nav-left">
             <nav>
@@ -32,19 +32,19 @@
     </header>
 
     <main>
-        <!-- Bannerseksjon -->
+        
         <section id="banner">
-            <h1>Velkommen nr1 sports butikken</h1>
-            <p>Oppdag de beste produktene til de beste prisene.</p>
+            <h1>Velkommen til nr1 sports butikken</h1>
+            <p>Oppdag det beste til de beste prisene.</p>
             <a href="#popular-products" class="btn">Utforsk produkter</a>
         </section>
 
-        <!-- Kundeanmeldelser -->
+        
         <section id="customer-reviews">
-            <h2>Meninger fra tidligere kunder</h2>
+            <h2>Meninger fra kjente kunder</h2>
             <article class="review-card">
                 <h3>Anmeldelse fra Ahmed M.</h3>
-                <p>"Veldig bra kvalitet og raske leveringer! Anbefales på det sterkeste."</p>
+                <p>"Veldig bra kvalitet og hurtige leveringer! Anbefales på det sterkeste."</p>
                 <span>- Ahmed M.</span>
             </article>
             <article class="review-card">
@@ -59,7 +59,7 @@
             </article>
         </section>
 
-        <!-- Våre mest populære produkter -->
+        
         <section id="popular-products">
             <h2>Våre mest populære produkter</h2>
 
@@ -100,7 +100,7 @@
             </article>
         </section>
 
-        <!-- Våre mest populære kategorier -->
+        
         <section id="popular-categories">
             <h2>Våre mest populære kategorier</h2>
             <article class="category-card">
@@ -109,9 +109,15 @@
             <article class="category-card">
                 <h3>treningstøy</h3>
             </article>
+            <article class="category-card">
+                <h3>sko</h3>
+            </article>
+            <article class="category-card">
+                <h3>drakter</h3>
+            </article>
         </section>
 
-        <!-- Footer -->
+        
         <footer id="footer">
             <section>
                 <h3>Kontakt oss</h3>
