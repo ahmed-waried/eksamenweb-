@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasse - Min Nettbutikk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="product.html#popular-products">Produkter</a></li>
+                <li><a href="index.html#popular-categories">Kategorier</a></li>
+                <li><a href="#footer">Kontakt oss</a></li>
+            </ul>
+        </nav>
+        <a href="index.html" class="logo">Logo</a>
+    </header>
+
+    <main>
+        <h1>Kassen</h1>
+
+        <!-- Betalingsinformasjon -->
+        <section id="payment-info">
+            <h2>Betalingsinformasjon</h2>
+            <form id="checkout-form" action="order-confirmation.html" method="post">
+                <label for="card-number">Kortnummer:</label>
+                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" 
+                       required pattern="\d{16}" title="Kortnummer må være 16 siffer">
+
+                <label for="expiry-date">Utløpsdato:</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/ÅÅ" 
+                       required pattern="\d{2}/\d{2}" title="Bruk formatet MM/ÅÅ">
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="123" 
+                       required pattern="\d{3}" title="CVV må være 3 siffer">
+
+                <!-- Leveringsvalg -->
+                <fieldset id="delivery-options">
+                    <legend>Velg leveringstype</legend>
+                    <label>
+                        <input type="radio" name="delivery" value="standard" checked> Standard levering (3-5 dager) - Gratis
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery" value="express"> Ekspress levering (1-2 dager) - 99 NOK
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery" value="pickup"> Hent i butikk - Gratis
+                    </label>
+                </fieldset>
+
+                <!-- Fullfør bestilling -->
+                <button type="submit">Fullfør bestilling</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <section>
+            <h3>Kontakt oss</h3>
+            <p>E-post: postmottak@hiof.no</p>
+        </section>
+        <section>
+            <h3>Snarveier</h3>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="product.html#popular-products">Produkter</a></li>
+                <li><a href="index.html#popular-categories">Kategorier</a></li>
+            </ul>
+        </section>
+        <section>
+            <h3>Sosiale medier</h3>
+            <ul>
+                <li><a href="https://www.instagram.com">Instagram</a></li>
+                <li><a href="https://www.facebook.com">Facebook</a></li>
+                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                <li><a href="https://www.pinterest.com">Pinterest</a></li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>
